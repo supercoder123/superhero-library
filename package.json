@@ -1,0 +1,22 @@
+{
+  "name": "superhero-library",
+  "version": "1.0.0",
+  "description": "Get random superhero names",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supercoder123/superhero-library.git"
+  },
+  "author": "Ashley Fernandes <ashleefernandes@gmail.com> (http://none.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/supercoder123/superhero-library/issues"
+  },
+  "homepage": "https://github.com/supercoder123/superhero-library#readme",
+  "dependencies": {
+    "unique-random-array": "2.0.0"
+  }
+}
