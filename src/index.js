@@ -1,9 +1,11 @@
 const superHeroNamesList = require("./superhero.json");
 const uniqueRandomArray = require("unique-random-array");
 
-let allSuperHeroNames = superHeroNamesList.map(superhero => {
-  return superhero.name;
-});
+let allSuperHeroNames = (n = superHeroNamesList.length) => {
+  return superHeroNamesList.slice(0, n).map(superhero => {
+    return superhero.name;
+  });
+};
 
 let superHeroById = id => {
   let superHeroObj;
@@ -29,9 +31,16 @@ let superHeroById = id => {
   }
 };
 
+let getByInitialLetter = letter => {
+  return allSuperHeroNames().filter(superhero => {
+    return superhero.charAt(0).toLowerCase() === letter.toLowerCase();
+  });
+};
+
 module.exports = {
   rawList: superHeroNamesList,
   allNames: allSuperHeroNames,
-  random: uniqueRandomArray(allSuperHeroNames),
-  getSuperHeroById: superHeroById
+  random: uniqueRandomArray(allSuperHeroNames()),
+  getSuperHeroById: superHeroById,
+  getByInitialLetter: getByInitialLetter
 };
