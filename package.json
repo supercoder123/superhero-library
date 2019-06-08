@@ -1,5 +1,5 @@
 {
-  "name": "superhero-library",
+  "name": "superhero-name-library",
   "version": "1.0.0",
   "description": "Get random superhero names",
   "main": "src/index.js",
