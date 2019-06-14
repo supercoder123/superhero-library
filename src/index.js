@@ -1,6 +1,7 @@
 const superHeroNamesList = require("./superhero.json");
 const uniqueRandomArray = require("unique-random-array");
 
+//return n superhero names default value of n = length of superhero.json array
 let allSuperHeroNames = (n = superHeroNamesList.length) => {
   return superHeroNamesList.slice(0, n).map(superhero => {
     return superhero.name;
