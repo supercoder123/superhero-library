@@ -1,14 +1,16 @@
 {
   "name": "superhero-name-library",
-  "version": "1.2.2",
+  "version": "1.2.3-semantic-release",
   "description": "Get random superhero names",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha src/index.test.js -w"
+    "commit": "git-cz",
+    "test": "mocha src/index.test.js -w",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/supercoder123/superhero-library.git"
+    "url": "https://github.com/supercoder123/superhero-library.git"
   },
   "author": "Ashley Fernandes <ashleefernandes@gmail.com> (http://none.com/)",
   "license": "MIT",
@@ -21,6 +23,14 @@
   },
   "devDependencies": {
     "chai": "4.2.0",
-    "mocha": "6.1.4"
+    "commitizen": "3.1.1",
+    "cz-conventional-changelog": "2.1.0",
+    "mocha": "6.1.4",
+    "semantic-release": "^15.13.16"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
